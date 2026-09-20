@@ -343,6 +343,7 @@ let activeFilter = "All";
 let session = null;
 let restTimerId = null;
 let mediaRequestToken = 0;
+const THEME_ORDER = ["industrial", "apple"];
 
 const escapeHtml = (value) => String(value)
   .replaceAll("&", "&amp;")
@@ -373,6 +374,27 @@ const showToast = (message) => {
   toast.textContent = message;
   toastRegion.append(toast);
   window.setTimeout(() => toast.remove(), 3500);
+};
+
+const applyTheme = (theme) => {
+  if (theme === "apple") document.documentElement.dataset.theme = "apple";
+  else delete document.documentElement.dataset.theme;
+
+  const themeColor = document.querySelector('meta[name="theme-color"]');
+  if (themeColor) themeColor.content = theme === "apple" ? "#e9f1fb" : "#11120f";
+  try {
+    localStorage.setItem("erolsGymTheme", theme);
+  } catch {
+    // Theme switching remains available for the current visit.
+  }
+};
+
+const cycleTheme = () => {
+  const current = document.documentElement.dataset.theme === "apple" ? "apple" : "industrial";
+  const next = THEME_ORDER[(THEME_ORDER.indexOf(current) + 1) % THEME_ORDER.length];
+  document.documentElement.classList.add("theme-switching");
+  applyTheme(next);
+  window.setTimeout(() => document.documentElement.classList.remove("theme-switching"), 420);
 };
 
 const toMusicEmbed = (value) => {
@@ -1056,6 +1078,11 @@ homeLink.addEventListener("click", (event) => {
 
 window.addEventListener("popstate", route);
 window.addEventListener("keydown", (event) => {
+  if (event.ctrlKey && !event.altKey && !event.metaKey && event.key.toLowerCase() === "j") {
+    event.preventDefault();
+    if (!event.repeat) cycleTheme();
+    return;
+  }
   if (event.key === "Escape" && !musicDock.classList.contains("is-collapsed")) {
     setMusicDockOpen(false);
     return;
@@ -1063,4 +1090,5 @@ window.addEventListener("keydown", (event) => {
   if (event.key === "Escape" && session && !document.querySelector(".complete-screen")) exitSession();
 });
 
+applyTheme(document.documentElement.dataset.theme === "apple" ? "apple" : "industrial");
 route();

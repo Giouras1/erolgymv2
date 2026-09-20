@@ -9,6 +9,12 @@
     />
     <meta name="theme-color" content="#11120f" />
     <title>Erol's Gym | Home workout tracker</title>
+    <script>
+      try {
+        const savedTheme = localStorage.getItem("erolsGymTheme");
+        if (savedTheme === "apple") document.documentElement.dataset.theme = savedTheme;
+      } catch {}
+    </script>
     <link rel="stylesheet" href="styles.css" />
     <script src="app.js" defer></script>
   </head>

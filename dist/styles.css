@@ -108,7 +108,7 @@ input:focus-visible {
   padding: 0 20px;
   font-size: 0.92rem;
   font-weight: 900;
-  letter-spacing: 0.06em;
+  letter-spacing: 0;
 }
 
 .header-status {
@@ -119,7 +119,7 @@ input:focus-visible {
   border-left: 1px solid var(--ink);
   font-size: 0.78rem;
   font-weight: 800;
-  letter-spacing: 0.06em;
+  letter-spacing: 0;
 }
 
 .status-dot {
@@ -144,7 +144,7 @@ input:focus-visible {
   margin: 0 0 10px;
   font-size: 0.78rem;
   font-weight: 900;
-  letter-spacing: 0.08em;
+  letter-spacing: 0;
   text-transform: uppercase;
 }
 
@@ -201,7 +201,7 @@ p {
 .date-line {
   font-size: 0.84rem;
   font-weight: 800;
-  letter-spacing: 0.05em;
+  letter-spacing: 0;
   text-transform: uppercase;
 }
 
@@ -338,7 +338,7 @@ p {
   color: var(--muted);
   font-size: 0.73rem;
   font-weight: 900;
-  letter-spacing: 0.08em;
+  letter-spacing: 0;
   text-transform: uppercase;
 }
 
@@ -495,7 +495,7 @@ p {
   color: var(--muted);
   font-size: 0.76rem;
   font-weight: 800;
-  letter-spacing: 0.06em;
+  letter-spacing: 0;
   text-transform: uppercase;
 }
 
@@ -748,7 +748,7 @@ p {
   margin-bottom: 4px;
   font-size: 0.68rem;
   font-weight: 900;
-  letter-spacing: 0.06em;
+  letter-spacing: 0;
 }
 
 .progress-segment-name {
@@ -812,7 +812,7 @@ p {
   content: "EXERCISEDB";
   font-size: 0.62rem;
   font-weight: 900;
-  letter-spacing: 0.08em;
+  letter-spacing: 0;
 }
 
 .exercise-media.is-fallback::after {
@@ -965,7 +965,7 @@ p {
   color: var(--muted);
   font-size: 0.8rem;
   font-weight: 900;
-  letter-spacing: 0.06em;
+  letter-spacing: 0;
   text-transform: uppercase;
 }
 
@@ -1223,7 +1223,7 @@ p {
   margin-bottom: 8px;
   font-size: 0.86rem;
   font-weight: 950;
-  letter-spacing: 0.08em;
+  letter-spacing: 0;
   text-transform: uppercase;
 }
 
@@ -1333,7 +1333,7 @@ p {
 .music-dock-title strong {
   font-size: 0.78rem;
   font-weight: 950;
-  letter-spacing: 0.06em;
+  letter-spacing: 0;
 }
 
 .music-dock-title small {
@@ -1744,6 +1744,883 @@ p {
     right: 10px;
     bottom: 82px;
     left: 10px;
+  }
+}
+
+/* Alternate glass theme */
+html[data-theme="apple"] {
+  color-scheme: light;
+  --ink: #1d1d1f;
+  --paper: #f5f5f7;
+  --white: rgba(255, 255, 255, 0.72);
+  --muted: #6e6e73;
+  --line: rgba(60, 60, 67, 0.18);
+  --line-dark: rgba(60, 60, 67, 0.3);
+  --acid: #0a84ff;
+  --coral: #ff9f0a;
+  --cyan: #32ade6;
+  --violet: #af52de;
+  --shadow: 0 18px 55px rgba(45, 56, 75, 0.16), inset 0 1px 0 rgba(255, 255, 255, 0.82);
+  --radius: 20px;
+  --header-height: 70px;
+  font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", "SF Pro Text", "Helvetica Neue", sans-serif;
+}
+
+html.theme-switching *,
+html.theme-switching *::before,
+html.theme-switching *::after {
+  transition-property: background-color, border-color, color, box-shadow, opacity !important;
+  transition-duration: 360ms !important;
+  transition-timing-function: ease !important;
+}
+
+html[data-theme="apple"] body {
+  padding-bottom: 92px;
+  background: linear-gradient(145deg, #dbeaff 0%, #f7f8fb 34%, #f1eaff 67%, #e2f7ef 100%);
+  background-attachment: fixed;
+  background-size: cover;
+  color: var(--ink);
+}
+
+html[data-theme="apple"] button:focus-visible,
+html[data-theme="apple"] a:focus-visible,
+html[data-theme="apple"] input:focus-visible {
+  outline: 4px solid rgba(10, 132, 255, 0.28);
+  outline-offset: 2px;
+}
+
+html[data-theme="apple"] .site-header {
+  top: 12px;
+  width: min(1280px, calc(100% - 24px));
+  min-height: var(--header-height);
+  margin: 12px auto 0;
+  overflow: hidden;
+  border: 1px solid rgba(255, 255, 255, 0.66);
+  border-radius: 24px;
+  background: rgba(246, 248, 252, 0.62);
+  box-shadow: 0 12px 38px rgba(43, 54, 72, 0.13), inset 0 1px 0 rgba(255, 255, 255, 0.9);
+  backdrop-filter: blur(28px) saturate(180%);
+  -webkit-backdrop-filter: blur(28px) saturate(180%);
+}
+
+html[data-theme="apple"] .brand-mark {
+  width: 48px;
+  height: 48px;
+  align-self: center;
+  margin-left: 10px;
+  border: 0;
+  border-radius: 15px;
+  background: #0a84ff;
+  color: #ffffff;
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.36), 0 4px 12px rgba(10, 132, 255, 0.28);
+  font-weight: 750;
+}
+
+html[data-theme="apple"] .brand-name {
+  padding: 0 16px;
+  font-weight: 700;
+}
+
+html[data-theme="apple"] .header-status {
+  align-self: center;
+  min-height: 42px;
+  margin-right: 12px;
+  padding: 0 16px;
+  border: 1px solid rgba(255, 255, 255, 0.72);
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.5);
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.86);
+}
+
+html[data-theme="apple"] .status-dot {
+  border: 0;
+  background: #30d158;
+  box-shadow: 0 0 0 4px rgba(48, 209, 88, 0.15);
+}
+
+html[data-theme="apple"] .page-shell {
+  width: min(1320px, calc(100% - 24px));
+  border: 0;
+  background: transparent;
+}
+
+html[data-theme="apple"] .eyebrow,
+html[data-theme="apple"] .workout-kicker,
+html[data-theme="apple"] .stat-label,
+html[data-theme="apple"] .meta-label,
+html[data-theme="apple"] .detail-stat span,
+html[data-theme="apple"] .set-label,
+html[data-theme="apple"] .prescription-cell span,
+html[data-theme="apple"] .rest-kicker,
+html[data-theme="apple"] .complete-kicker {
+  text-transform: none;
+  font-weight: 650;
+}
+
+html[data-theme="apple"] .index-intro {
+  margin-top: 30px;
+  overflow: hidden;
+  border: 1px solid rgba(255, 255, 255, 0.68);
+  border-radius: 36px;
+  background: rgba(255, 255, 255, 0.42);
+  box-shadow: var(--shadow);
+  backdrop-filter: blur(28px) saturate(170%);
+  -webkit-backdrop-filter: blur(28px) saturate(170%);
+}
+
+html[data-theme="apple"] .index-title-wrap {
+  min-height: 285px;
+  padding: 54px 58px;
+  border-right-color: rgba(60, 60, 67, 0.12);
+  background: transparent;
+  color: var(--ink);
+}
+
+html[data-theme="apple"] .index-title-wrap .eyebrow {
+  color: #0071e3;
+}
+
+html[data-theme="apple"] .index-title {
+  max-width: 720px;
+  margin-bottom: 18px;
+  font-size: 5.5rem;
+  font-weight: 720;
+  line-height: 0.94;
+  text-transform: none;
+}
+
+html[data-theme="apple"] .index-subtitle {
+  color: #515154;
+  font-size: 1.12rem;
+}
+
+html[data-theme="apple"] .weekly-panel {
+  background: rgba(218, 232, 255, 0.5);
+}
+
+html[data-theme="apple"] .week-number {
+  color: #0071e3;
+  font-weight: 720;
+}
+
+html[data-theme="apple"] .stat-block {
+  border-top-color: rgba(60, 60, 67, 0.22);
+}
+
+html[data-theme="apple"] .index-toolbar {
+  padding: 24px 4px 14px;
+  border: 0;
+  background: transparent;
+}
+
+html[data-theme="apple"] .filter-group {
+  padding: 5px;
+  border: 1px solid rgba(255, 255, 255, 0.7);
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.46);
+  box-shadow: 0 8px 30px rgba(45, 56, 75, 0.1), inset 0 1px 0 rgba(255, 255, 255, 0.85);
+  backdrop-filter: blur(22px) saturate(170%);
+  -webkit-backdrop-filter: blur(22px) saturate(170%);
+}
+
+html[data-theme="apple"] .filter-button {
+  min-height: 40px;
+  padding: 8px 16px;
+  border: 0;
+  border-radius: 999px;
+  font-weight: 650;
+}
+
+html[data-theme="apple"] .filter-button:hover,
+html[data-theme="apple"] .filter-button.is-active {
+  background: rgba(255, 255, 255, 0.86);
+  color: #0071e3;
+  box-shadow: 0 3px 12px rgba(45, 56, 75, 0.12), inset 0 1px 0 #ffffff;
+}
+
+html[data-theme="apple"] .workout-index {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 14px;
+  padding: 6px 0 36px;
+  background: transparent;
+}
+
+html[data-theme="apple"] .workout-card {
+  min-height: 190px;
+  grid-template-columns: 74px minmax(0, 1fr) 52px;
+  grid-template-rows: 1fr auto;
+  overflow: hidden;
+  border: 1px solid rgba(255, 255, 255, 0.7);
+  border-radius: 28px;
+  background: rgba(255, 255, 255, 0.5);
+  box-shadow: 0 12px 34px rgba(45, 56, 75, 0.1), inset 0 1px 0 rgba(255, 255, 255, 0.86);
+  backdrop-filter: blur(24px) saturate(165%);
+  -webkit-backdrop-filter: blur(24px) saturate(165%);
+  transition: transform 180ms ease, box-shadow 180ms ease, background-color 180ms ease;
+}
+
+html[data-theme="apple"] .workout-card:hover,
+html[data-theme="apple"] .workout-card:focus-visible {
+  background: rgba(255, 255, 255, 0.72);
+  color: var(--ink);
+  box-shadow: 0 18px 46px rgba(45, 56, 75, 0.16), inset 0 1px 0 #ffffff;
+  transform: translateY(-3px);
+}
+
+html[data-theme="apple"] .workout-number {
+  width: 54px;
+  height: 54px;
+  align-self: start;
+  margin: 22px 0 0 18px;
+  border: 0;
+  border-radius: 17px;
+  background: color-mix(in srgb, var(--accent) 22%, rgba(255, 255, 255, 0.82));
+  color: color-mix(in srgb, var(--accent) 78%, #111111);
+  font-weight: 720;
+}
+
+html[data-theme="apple"] .workout-card:hover .workout-number,
+html[data-theme="apple"] .workout-card:focus-visible .workout-number {
+  background: color-mix(in srgb, var(--accent) 32%, rgba(255, 255, 255, 0.86));
+}
+
+html[data-theme="apple"] .workout-main {
+  padding: 25px 14px 10px 18px;
+}
+
+html[data-theme="apple"] .workout-kicker,
+html[data-theme="apple"] .workout-card:hover .workout-kicker,
+html[data-theme="apple"] .workout-card:focus-visible .workout-kicker {
+  color: var(--muted);
+}
+
+html[data-theme="apple"] .workout-name {
+  font-size: 1.65rem;
+  font-weight: 710;
+  line-height: 1.08;
+  text-transform: none;
+}
+
+html[data-theme="apple"] .workout-meta {
+  display: flex;
+  grid-row: 2;
+  grid-column: 2;
+  gap: 16px;
+  padding: 0 14px 22px 18px;
+  border: 0;
+}
+
+html[data-theme="apple"] .meta-cell {
+  flex-direction: row;
+  align-items: baseline;
+  gap: 5px;
+  padding: 0;
+}
+
+html[data-theme="apple"] .meta-cell + .meta-cell {
+  border: 0;
+}
+
+html[data-theme="apple"] .meta-value {
+  font-size: 0.9rem;
+  font-weight: 700;
+}
+
+html[data-theme="apple"] .meta-label {
+  margin: 0;
+  font-size: 0.76rem;
+  text-transform: none;
+}
+
+html[data-theme="apple"] .workout-arrow {
+  width: 38px;
+  height: 38px;
+  align-self: center;
+  justify-self: center;
+  grid-row: 1 / 3;
+  grid-column: 3;
+  border: 0;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.66);
+  color: #0071e3;
+  box-shadow: inset 0 1px 0 #ffffff;
+  font-size: 1.25rem;
+}
+
+html[data-theme="apple"] .history-band {
+  margin: 0 0 28px;
+  padding: 36px 30px 40px;
+  border: 1px solid rgba(255, 255, 255, 0.66);
+  border-radius: 32px;
+  background: rgba(255, 255, 255, 0.38);
+  box-shadow: var(--shadow);
+  backdrop-filter: blur(24px) saturate(165%);
+  -webkit-backdrop-filter: blur(24px) saturate(165%);
+}
+
+html[data-theme="apple"] .section-title {
+  font-weight: 710;
+  text-transform: none;
+}
+
+html[data-theme="apple"] .history-item,
+html[data-theme="apple"] .empty-history {
+  border: 1px solid rgba(255, 255, 255, 0.72);
+  border-radius: 22px;
+  background: rgba(255, 255, 255, 0.54);
+  box-shadow: inset 0 1px 0 #ffffff;
+}
+
+html[data-theme="apple"] .history-item strong {
+  text-transform: none;
+}
+
+html[data-theme="apple"] .detail-topbar {
+  margin-top: 26px;
+  padding: 8px 14px;
+  border: 1px solid rgba(255, 255, 255, 0.7);
+  border-radius: 22px;
+  background: rgba(255, 255, 255, 0.46);
+  box-shadow: 0 10px 30px rgba(45, 56, 75, 0.1), inset 0 1px 0 #ffffff;
+  backdrop-filter: blur(24px) saturate(170%);
+  -webkit-backdrop-filter: blur(24px) saturate(170%);
+}
+
+html[data-theme="apple"] .back-button {
+  min-height: 42px;
+  padding: 0 12px;
+  border-radius: 999px;
+  color: #0071e3;
+  text-transform: none;
+}
+
+html[data-theme="apple"] .detail-code {
+  padding: 7px 12px;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.58);
+}
+
+html[data-theme="apple"] .detail-hero {
+  margin-top: 14px;
+  overflow: hidden;
+  border: 1px solid rgba(255, 255, 255, 0.7);
+  border-radius: 36px;
+  background: rgba(255, 255, 255, 0.46);
+  color: var(--ink);
+  box-shadow: var(--shadow);
+  backdrop-filter: blur(26px) saturate(170%);
+  -webkit-backdrop-filter: blur(26px) saturate(170%);
+}
+
+html[data-theme="apple"] .detail-heading {
+  padding: 58px;
+  border-right-color: rgba(60, 60, 67, 0.12);
+}
+
+html[data-theme="apple"] .detail-heading .eyebrow {
+  color: #0071e3;
+}
+
+html[data-theme="apple"] .detail-title {
+  font-size: 4.9rem;
+  font-weight: 720;
+  line-height: 0.96;
+  text-transform: none;
+}
+
+html[data-theme="apple"] .detail-description {
+  color: #515154;
+  font-size: 1.06rem;
+}
+
+html[data-theme="apple"] .detail-start-panel {
+  background: color-mix(in srgb, var(--accent) 22%, rgba(255, 255, 255, 0.68));
+}
+
+html[data-theme="apple"] .detail-stats {
+  overflow: hidden;
+  border-color: rgba(60, 60, 67, 0.16);
+  border-radius: 22px;
+  background: rgba(255, 255, 255, 0.34);
+}
+
+html[data-theme="apple"] .detail-stat:nth-child(even),
+html[data-theme="apple"] .detail-stat:nth-child(n + 3) {
+  border-color: rgba(60, 60, 67, 0.16);
+}
+
+html[data-theme="apple"] .primary-button,
+html[data-theme="apple"] .complete-set-button,
+html[data-theme="apple"] .rest-skip-button,
+html[data-theme="apple"] .finish-button {
+  border: 0;
+  border-radius: 999px;
+  background: #0071e3;
+  color: #ffffff;
+  box-shadow: 0 8px 22px rgba(0, 113, 227, 0.24), inset 0 1px 0 rgba(255, 255, 255, 0.26);
+  text-transform: none;
+}
+
+html[data-theme="apple"] .primary-button:hover,
+html[data-theme="apple"] .complete-set-button:hover,
+html[data-theme="apple"] .rest-skip-button:hover,
+html[data-theme="apple"] .finish-button:hover {
+  box-shadow: 0 12px 28px rgba(0, 113, 227, 0.3), inset 0 1px 0 rgba(255, 255, 255, 0.3);
+}
+
+html[data-theme="apple"] .exercise-section {
+  margin-top: 24px;
+  padding-bottom: 30px;
+  background: transparent;
+}
+
+html[data-theme="apple"] .exercise-section-header {
+  padding: 25px 12px 16px;
+  border: 0;
+}
+
+html[data-theme="apple"] .exercise-section-header h2 {
+  text-transform: none;
+}
+
+html[data-theme="apple"] .exercise-list {
+  display: grid;
+  gap: 10px;
+}
+
+html[data-theme="apple"] .exercise-row {
+  overflow: hidden;
+  border: 1px solid rgba(255, 255, 255, 0.7);
+  border-radius: 22px;
+  background: rgba(255, 255, 255, 0.5);
+  box-shadow: 0 8px 24px rgba(45, 56, 75, 0.08), inset 0 1px 0 #ffffff;
+  backdrop-filter: blur(20px) saturate(160%);
+  -webkit-backdrop-filter: blur(20px) saturate(160%);
+}
+
+html[data-theme="apple"] .exercise-order {
+  border-right-color: rgba(60, 60, 67, 0.12);
+  background: color-mix(in srgb, var(--accent) 14%, rgba(255, 255, 255, 0.56));
+  color: #0071e3;
+}
+
+html[data-theme="apple"] .exercise-name-cell strong {
+  text-transform: none;
+}
+
+html[data-theme="apple"] .exercise-prescription,
+html[data-theme="apple"] .exercise-load {
+  border-left-color: rgba(60, 60, 67, 0.12);
+}
+
+html[data-theme="apple"] .session-page {
+  padding: 12px;
+  background: transparent;
+  color: var(--ink);
+}
+
+html[data-theme="apple"] .session-progress {
+  gap: 6px;
+  padding: 6px;
+  overflow-x: auto;
+  border: 1px solid rgba(255, 255, 255, 0.7);
+  border-radius: 24px;
+  background: rgba(255, 255, 255, 0.44);
+  box-shadow: 0 10px 30px rgba(45, 56, 75, 0.1), inset 0 1px 0 #ffffff;
+  backdrop-filter: blur(24px) saturate(170%);
+  -webkit-backdrop-filter: blur(24px) saturate(170%);
+}
+
+html[data-theme="apple"] .progress-segment {
+  min-height: 68px;
+  overflow: hidden;
+  border: 0;
+  border-radius: 18px;
+  background: transparent;
+  color: #6e6e73;
+}
+
+html[data-theme="apple"] .progress-segment.is-current {
+  background: rgba(255, 255, 255, 0.82);
+  color: var(--ink);
+  box-shadow: 0 5px 15px rgba(45, 56, 75, 0.1), inset 0 1px 0 #ffffff;
+}
+
+html[data-theme="apple"] .progress-segment.is-complete {
+  background: rgba(10, 132, 255, 0.12);
+  color: #0071e3;
+}
+
+html[data-theme="apple"] .progress-segment-bar {
+  right: 12px;
+  bottom: 7px;
+  left: 12px;
+  height: 4px;
+  overflow: hidden;
+  border-radius: 999px;
+  background: rgba(60, 60, 67, 0.12);
+}
+
+html[data-theme="apple"] .progress-segment-bar span,
+html[data-theme="apple"] .progress-segment.is-current .progress-segment-bar span {
+  border-radius: inherit;
+  background: #0a84ff;
+}
+
+html[data-theme="apple"] .session-layout {
+  min-height: calc(100vh - var(--header-height) - 102px);
+  gap: 12px;
+  padding-top: 12px;
+}
+
+html[data-theme="apple"] .exercise-guide,
+html[data-theme="apple"] .set-console {
+  overflow: hidden;
+  border: 1px solid rgba(255, 255, 255, 0.7);
+  border-radius: 32px;
+  background: rgba(255, 255, 255, 0.52);
+  box-shadow: var(--shadow);
+  backdrop-filter: blur(26px) saturate(170%);
+  -webkit-backdrop-filter: blur(26px) saturate(170%);
+}
+
+html[data-theme="apple"] .exercise-media {
+  background: rgba(255, 255, 255, 0.52);
+}
+
+html[data-theme="apple"] .exercise-media::after {
+  border-color: rgba(60, 60, 67, 0.16);
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.72);
+  box-shadow: inset 0 1px 0 #ffffff;
+}
+
+html[data-theme="apple"] .guide-copy {
+  background: rgba(22, 27, 36, 0.87);
+  color: #ffffff;
+  backdrop-filter: blur(22px) saturate(150%);
+  -webkit-backdrop-filter: blur(22px) saturate(150%);
+}
+
+html[data-theme="apple"] .guide-tag {
+  border-color: rgba(255, 255, 255, 0.22);
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.1);
+  color: #f5f5f7;
+}
+
+html[data-theme="apple"] .active-exercise-name {
+  font-weight: 720;
+  text-transform: none;
+}
+
+html[data-theme="apple"] .cue-list {
+  color: #e4e5e9;
+}
+
+html[data-theme="apple"] .set-console {
+  color: var(--ink);
+}
+
+html[data-theme="apple"] .session-close {
+  border: 0;
+  border-radius: 50%;
+  background: rgba(118, 118, 128, 0.12);
+  color: #3a3a3c;
+}
+
+html[data-theme="apple"] .set-number {
+  color: #0071e3;
+  font-weight: 720;
+}
+
+html[data-theme="apple"] .prescription-block {
+  overflow: hidden;
+  border-color: rgba(60, 60, 67, 0.14);
+  border-radius: 20px;
+  background: rgba(255, 255, 255, 0.38);
+}
+
+html[data-theme="apple"] .prescription-cell + .prescription-cell {
+  border-left-color: rgba(60, 60, 67, 0.14);
+}
+
+html[data-theme="apple"] .equipment-panel {
+  border-color: rgba(255, 255, 255, 0.72);
+  border-radius: 24px;
+  background: rgba(255, 255, 255, 0.48);
+  box-shadow: inset 0 1px 0 #ffffff;
+}
+
+html[data-theme="apple"] .equipment-panel h3 {
+  text-transform: none;
+}
+
+html[data-theme="apple"] .equipment-total {
+  border-radius: 999px;
+  background: rgba(10, 132, 255, 0.14);
+  color: #0071e3;
+}
+
+html[data-theme="apple"] .dumbbell-stage,
+html[data-theme="apple"] .bodyweight-panel {
+  border-color: rgba(60, 60, 67, 0.12);
+  background: rgba(255, 255, 255, 0.34);
+}
+
+html[data-theme="apple"] .bodyweight-ring {
+  border-color: rgba(60, 60, 67, 0.14);
+  border-right-color: #0a84ff;
+}
+
+html[data-theme="apple"] .bodyweight-ring strong {
+  text-transform: none;
+}
+
+html[data-theme="apple"] .session-note {
+  color: #6e6e73;
+}
+
+html[data-theme="apple"] .rest-screen,
+html[data-theme="apple"] .complete-screen {
+  background: rgba(231, 239, 250, 0.7);
+  backdrop-filter: blur(32px) saturate(170%);
+  -webkit-backdrop-filter: blur(32px) saturate(170%);
+}
+
+html[data-theme="apple"] .rest-content,
+html[data-theme="apple"] .complete-content {
+  padding: 46px;
+  border: 1px solid rgba(255, 255, 255, 0.76);
+  border-radius: 44px;
+  background: rgba(255, 255, 255, 0.54);
+  box-shadow: 0 28px 80px rgba(45, 56, 75, 0.2), inset 0 1px 0 #ffffff;
+}
+
+html[data-theme="apple"] .countdown {
+  color: #ff9500;
+  font-weight: 720;
+}
+
+html[data-theme="apple"] .rest-next,
+html[data-theme="apple"] .complete-title {
+  text-transform: none;
+}
+
+html[data-theme="apple"] .rest-progress-track {
+  overflow: hidden;
+  border: 0;
+  border-radius: 999px;
+  background: rgba(118, 118, 128, 0.14);
+}
+
+html[data-theme="apple"] .rest-progress-track span {
+  border-radius: inherit;
+  background: #ff9500;
+}
+
+html[data-theme="apple"] .complete-mark {
+  border: 0;
+  background: rgba(48, 209, 88, 0.16);
+  color: #248a3d;
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.85);
+}
+
+html[data-theme="apple"] .music-dock {
+  overflow: hidden;
+  border-color: rgba(255, 255, 255, 0.72);
+  border-radius: 28px;
+  background: rgba(246, 248, 252, 0.68);
+  box-shadow: 0 18px 54px rgba(45, 56, 75, 0.2), inset 0 1px 0 #ffffff;
+  backdrop-filter: blur(28px) saturate(180%);
+  -webkit-backdrop-filter: blur(28px) saturate(180%);
+}
+
+html[data-theme="apple"] .music-dock-header {
+  background: transparent;
+}
+
+html[data-theme="apple"] .equalizer i {
+  border-radius: 999px;
+  background: #0a84ff;
+}
+
+html[data-theme="apple"] .music-toggle {
+  border: 0;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.7);
+  color: #0071e3;
+  box-shadow: inset 0 1px 0 #ffffff;
+}
+
+html[data-theme="apple"] .music-dock-body,
+html[data-theme="apple"] .music-form {
+  border-color: rgba(60, 60, 67, 0.12);
+  background: rgba(255, 255, 255, 0.36);
+}
+
+html[data-theme="apple"] .music-input-row input {
+  border-color: rgba(60, 60, 67, 0.18);
+  border-radius: 13px 0 0 13px;
+  background: rgba(255, 255, 255, 0.72);
+}
+
+html[data-theme="apple"] .music-input-row button {
+  border-color: #0071e3;
+  border-radius: 0 13px 13px 0;
+  background: #0071e3;
+  text-transform: none;
+}
+
+html[data-theme="apple"] .toast {
+  border-color: rgba(255, 255, 255, 0.72);
+  border-radius: 18px;
+  background: rgba(255, 255, 255, 0.7);
+  box-shadow: var(--shadow);
+  backdrop-filter: blur(24px) saturate(170%);
+  -webkit-backdrop-filter: blur(24px) saturate(170%);
+}
+
+@media (max-width: 980px) {
+  html[data-theme="apple"] .index-title-wrap,
+  html[data-theme="apple"] .detail-heading,
+  html[data-theme="apple"] .exercise-guide {
+    border-right: 0;
+    border-bottom-color: rgba(60, 60, 67, 0.12);
+  }
+
+  html[data-theme="apple"] .weekly-panel,
+  html[data-theme="apple"] .detail-start-panel {
+    border-top: 1px solid rgba(60, 60, 67, 0.1);
+  }
+
+  html[data-theme="apple"] .workout-index {
+    grid-template-columns: 1fr;
+  }
+
+  html[data-theme="apple"] .session-layout {
+    padding-bottom: 12px;
+  }
+}
+
+@media (max-width: 650px) {
+  html[data-theme="apple"] {
+    --header-height: 62px;
+  }
+
+  html[data-theme="apple"] body {
+    padding-bottom: 82px;
+  }
+
+  html[data-theme="apple"] .site-header {
+    top: 6px;
+    width: calc(100% - 12px);
+    margin-top: 6px;
+    border-radius: 20px;
+  }
+
+  html[data-theme="apple"] .brand-mark {
+    width: 42px;
+    height: 42px;
+    margin-left: 9px;
+    border-radius: 13px;
+  }
+
+  html[data-theme="apple"] .header-status {
+    margin-right: 8px;
+    padding: 0 13px;
+  }
+
+  html[data-theme="apple"] .page-shell {
+    width: calc(100% - 12px);
+  }
+
+  html[data-theme="apple"] .index-intro,
+  html[data-theme="apple"] .detail-hero {
+    margin-top: 16px;
+    border-radius: 28px;
+  }
+
+  html[data-theme="apple"] .index-title-wrap,
+  html[data-theme="apple"] .detail-heading {
+    padding: 36px 22px;
+  }
+
+  html[data-theme="apple"] .index-title,
+  html[data-theme="apple"] .detail-title {
+    font-size: 3rem;
+  }
+
+  html[data-theme="apple"] .index-toolbar {
+    padding: 16px 0 12px;
+  }
+
+  html[data-theme="apple"] .filter-group {
+    width: 100%;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    border-radius: 22px;
+  }
+
+  html[data-theme="apple"] .filter-button {
+    border-radius: 16px;
+  }
+
+  html[data-theme="apple"] .workout-card {
+    min-height: 150px;
+    grid-template-columns: 60px minmax(0, 1fr) 46px;
+    border-radius: 24px;
+  }
+
+  html[data-theme="apple"] .workout-number {
+    width: 44px;
+    height: 44px;
+    margin: 18px 0 0 13px;
+    border-radius: 14px;
+  }
+
+  html[data-theme="apple"] .workout-main {
+    padding: 20px 10px 18px 14px;
+  }
+
+  html[data-theme="apple"] .workout-name {
+    font-size: 1.3rem;
+  }
+
+  html[data-theme="apple"] .workout-meta {
+    display: none;
+  }
+
+  html[data-theme="apple"] .history-band {
+    padding: 28px 16px;
+    border-radius: 28px;
+  }
+
+  html[data-theme="apple"] .detail-topbar {
+    margin-top: 14px;
+  }
+
+  html[data-theme="apple"] .exercise-row {
+    border-radius: 18px;
+  }
+
+  html[data-theme="apple"] .session-page {
+    padding: 6px;
+  }
+
+  html[data-theme="apple"] .session-progress {
+    border-radius: 20px;
+  }
+
+  html[data-theme="apple"] .exercise-guide,
+  html[data-theme="apple"] .set-console {
+    border-radius: 26px;
+  }
+
+  html[data-theme="apple"] .rest-content,
+  html[data-theme="apple"] .complete-content {
+    padding: 32px 18px;
+    border-radius: 32px;
   }
 }
 
