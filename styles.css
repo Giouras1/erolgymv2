@@ -176,7 +176,7 @@ p {
 .index-title {
   max-width: 840px;
   margin-bottom: 20px;
-  font-size: clamp(3rem, 8vw, 7.5rem);
+  font-size: 7rem;
   font-weight: 950;
   line-height: 0.86;
   letter-spacing: 0;
@@ -207,7 +207,7 @@ p {
 
 .week-number {
   margin: 12px 0 0;
-  font-size: clamp(4.6rem, 8vw, 7rem);
+  font-size: 6rem;
   font-weight: 950;
   line-height: 0.9;
 }
@@ -349,7 +349,7 @@ p {
 
 .workout-name {
   margin: 0;
-  font-size: clamp(1.5rem, 3.2vw, 2.55rem);
+  font-size: 2.25rem;
   font-weight: 950;
   line-height: 1;
   letter-spacing: 0;
@@ -415,7 +415,7 @@ p {
 
 .section-title {
   margin: 0;
-  font-size: clamp(1.7rem, 4vw, 3rem);
+  font-size: 2.5rem;
   font-weight: 950;
   line-height: 1;
   text-transform: uppercase;
@@ -519,7 +519,7 @@ p {
 .detail-title {
   max-width: 900px;
   margin-bottom: 22px;
-  font-size: clamp(3rem, 7vw, 7rem);
+  font-size: 6rem;
   font-weight: 950;
   line-height: 0.88;
   letter-spacing: 0;
@@ -815,6 +815,10 @@ p {
   letter-spacing: 0.08em;
 }
 
+.exercise-media.is-fallback::after {
+  content: "LOCAL GUIDE";
+}
+
 .exercise-gif {
   display: block;
   width: 100%;
@@ -923,7 +927,7 @@ p {
 
 .active-exercise-name {
   margin-bottom: 14px;
-  font-size: clamp(1.8rem, 4vw, 3.7rem);
+  font-size: 3.2rem;
   font-weight: 950;
   line-height: 0.95;
   text-transform: uppercase;
@@ -967,7 +971,7 @@ p {
 
 .set-number {
   margin: 0;
-  font-size: clamp(4rem, 10vw, 8.8rem);
+  font-size: 7rem;
   font-weight: 950;
   line-height: 0.78;
 }
@@ -1003,7 +1007,7 @@ p {
 .prescription-cell strong {
   display: block;
   overflow-wrap: anywhere;
-  font-size: clamp(1.25rem, 3vw, 2rem);
+  font-size: 1.75rem;
   font-weight: 950;
   line-height: 1;
 }
@@ -1225,7 +1229,7 @@ p {
 
 .countdown {
   margin: 0;
-  font-size: clamp(9rem, 31vw, 23rem);
+  font-size: 20rem;
   font-variant-numeric: tabular-nums;
   font-weight: 950;
   line-height: 0.8;
@@ -1233,7 +1237,7 @@ p {
 
 .rest-next {
   margin: 28px 0 24px;
-  font-size: clamp(1.2rem, 3vw, 2rem);
+  font-size: 1.7rem;
   font-weight: 900;
   text-transform: uppercase;
 }
@@ -1276,7 +1280,7 @@ p {
 
 .complete-title {
   margin-bottom: 18px;
-  font-size: clamp(3.8rem, 12vw, 9rem);
+  font-size: 7rem;
   font-weight: 950;
   line-height: 0.84;
   text-transform: uppercase;
@@ -1293,10 +1297,182 @@ p {
   padding: 0 30px;
 }
 
+.music-dock {
+  position: fixed;
+  z-index: 80;
+  right: 18px;
+  bottom: 18px;
+  width: min(390px, calc(100vw - 36px));
+  overflow: hidden;
+  border: 1px solid var(--ink);
+  border-radius: var(--radius);
+  background: var(--white);
+  box-shadow: var(--shadow);
+}
+
+.music-dock-header {
+  display: flex;
+  min-height: 62px;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  padding: 9px 10px 9px 16px;
+  background: var(--acid);
+}
+
+.music-dock-title {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.music-dock-title > span:last-child {
+  display: grid;
+}
+
+.music-dock-title strong {
+  font-size: 0.78rem;
+  font-weight: 950;
+  letter-spacing: 0.06em;
+}
+
+.music-dock-title small {
+  margin-top: 1px;
+  font-size: 0.66rem;
+  font-weight: 800;
+}
+
+.equalizer {
+  display: flex;
+  width: 27px;
+  height: 25px;
+  align-items: flex-end;
+  gap: 3px;
+}
+
+.equalizer i {
+  width: 7px;
+  height: 35%;
+  background: var(--ink);
+  transform-origin: bottom;
+}
+
+.music-dock:not(.is-collapsed) .equalizer i {
+  animation: equalize 900ms ease-in-out infinite alternate;
+}
+
+.music-dock:not(.is-collapsed) .equalizer i:nth-child(2) {
+  animation-delay: -500ms;
+}
+
+.music-dock:not(.is-collapsed) .equalizer i:nth-child(3) {
+  animation-delay: -200ms;
+}
+
+@keyframes equalize {
+  from { transform: scaleY(0.65); }
+  to { transform: scaleY(2.6); }
+}
+
+.music-toggle {
+  display: grid;
+  width: 42px;
+  height: 42px;
+  flex: 0 0 42px;
+  place-items: center;
+  border: 1px solid var(--ink);
+  border-radius: var(--radius);
+  background: var(--ink);
+  color: var(--white);
+  font-size: 1.35rem;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.music-dock-body {
+  max-height: min(520px, calc(100vh - 104px));
+  overflow: auto;
+  border-top: 1px solid var(--ink);
+  opacity: 1;
+  transition: max-height 220ms ease, opacity 160ms ease;
+}
+
+.music-dock.is-collapsed .music-dock-body {
+  max-height: 0;
+  border-top: 0;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.music-dock iframe {
+  display: block;
+  width: 100%;
+  height: 352px;
+  border: 0;
+  background: var(--ink);
+}
+
+.music-form {
+  padding: 16px;
+  border-top: 1px solid var(--ink);
+  background: var(--paper);
+}
+
+.music-form label {
+  display: block;
+  margin-bottom: 7px;
+  font-size: 0.75rem;
+  font-weight: 900;
+  text-transform: uppercase;
+}
+
+.music-input-row {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+}
+
+.music-input-row input,
+.music-input-row button {
+  min-height: 44px;
+  border: 1px solid var(--ink);
+}
+
+.music-input-row input {
+  min-width: 0;
+  padding: 9px 11px;
+  border-radius: var(--radius) 0 0 var(--radius);
+  background: var(--white);
+  font-size: 0.8rem;
+}
+
+.music-input-row button {
+  padding: 0 16px;
+  border-left: 0;
+  border-radius: 0 var(--radius) var(--radius) 0;
+  background: var(--ink);
+  color: var(--white);
+  font-size: 0.75rem;
+  font-weight: 900;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+
+.music-message {
+  min-height: 18px;
+  margin: 8px 0 0;
+  color: var(--muted);
+  font-size: 0.72rem;
+  font-weight: 700;
+}
+
+.music-message.is-error {
+  color: #b02e17;
+}
+
 .toast-region {
   position: fixed;
   z-index: 300;
-  right: 18px;
+  right: 426px;
   bottom: 18px;
   display: grid;
   gap: 8px;
@@ -1342,6 +1518,18 @@ p {
 
   .weekly-panel {
     min-height: 250px;
+  }
+
+  .index-title {
+    font-size: 5rem;
+  }
+
+  .detail-title {
+    font-size: 4.75rem;
+  }
+
+  .countdown {
+    font-size: 15rem;
   }
 
   .workout-card {
@@ -1399,7 +1587,7 @@ p {
 
   .index-title,
   .detail-title {
-    font-size: clamp(2.8rem, 16vw, 5rem);
+    font-size: 3rem;
   }
 
   .weekly-panel,
@@ -1416,7 +1604,7 @@ p {
   .filter-group {
     width: 100%;
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(auto-fit, minmax(82px, 1fr));
   }
 
   .filter-button {
@@ -1527,7 +1715,35 @@ p {
   }
 
   .countdown {
-    font-size: clamp(8rem, 46vw, 14rem);
+    font-size: 9rem;
+  }
+
+  .active-exercise-name {
+    font-size: 2.2rem;
+  }
+
+  .set-number {
+    font-size: 4.5rem;
+  }
+
+  .complete-title {
+    font-size: 4.5rem;
+  }
+
+  .music-dock {
+    right: 10px;
+    bottom: 10px;
+    width: calc(100vw - 20px);
+  }
+
+  .music-dock iframe {
+    height: 280px;
+  }
+
+  .toast-region {
+    right: 10px;
+    bottom: 82px;
+    left: 10px;
   }
 }
 

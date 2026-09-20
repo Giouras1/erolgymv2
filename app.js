@@ -138,20 +138,190 @@ const workouts = [
     ],
   },
   {
+    id: "pull-bravo",
+    name: "Pull Workout - Bravo",
+    family: "Pull",
+    focus: "Row strength",
+    duration: 41,
+    level: "Controlled",
+    accent: "#45cce1",
+    description: "A row-heavy pull session that builds a strong mid-back before finishing with strict arm work.",
+    exercises: [
+      createExercise({ name: "Bent-Over Dumbbell Row", query: "dumbbell bent-over row", target: "Upper back", sets: 4, reps: "8-10", rest: 75, load: 12, plates: [2.5, 2.5], cues: ["Hinge until the torso is almost parallel to the floor.", "Pull both elbows toward the hips.", "Keep the neck long and lower with control." ] }),
+      createExercise({ name: "Renegade Row", query: "dumbbell renegade row", target: "Lats / core", sets: 3, reps: "8 / side", rest: 60, load: 7, plates: [1.25, 1.25], cues: ["Set the feet wide for balance.", "Keep the hips square while rowing.", "Press the supporting dumbbell firmly into the floor." ] }),
+      createExercise({ name: "Dumbbell Pullover", query: "dumbbell pullover", target: "Lats", equipment: "One dumbbell", sets: 3, reps: "12", rest: 60, load: 9.5, plates: [2.5, 1.25], cues: ["Keep the ribs stacked over the pelvis.", "Reach back only as far as the shoulders allow.", "Pull the weight back over the chest with the lats." ] }),
+      createExercise({ name: "Concentration Curl", query: "dumbbell concentration curl", target: "Biceps", equipment: "One dumbbell", sets: 3, reps: "10 / side", rest: 45, load: 7, plates: [1.25, 1.25], cues: ["Brace the elbow against the inner thigh.", "Curl without lifting the shoulder.", "Reach full extension at the bottom." ] }),
+      createExercise({ name: "Cross-Body Hammer Curl", query: "dumbbell cross body hammer curl", target: "Biceps / forearms", sets: 3, reps: "12 total", rest: 45, load: 7, plates: [1.25, 1.25], cues: ["Curl toward the opposite shoulder.", "Keep the palm facing inward.", "Alternate sides without swaying." ] }),
+    ],
+  },
+  {
+    id: "pull-charlie",
+    name: "Pull Workout - Charlie",
+    family: "Pull",
+    focus: "Upper-back density",
+    duration: 37,
+    level: "Challenging",
+    accent: "#a58cff",
+    description: "Higher-rep rows, traps, and curls with short rests for a dense upper-back and arm session.",
+    exercises: [
+      createExercise({ name: "Dumbbell High Pull", query: "dumbbell high pull", target: "Upper back / traps", sets: 4, reps: "10", rest: 60, load: 9.5, plates: [2.5, 1.25], cues: ["Drive the elbows up and out.", "Keep the dumbbells close to the body.", "Lower without dropping the shoulders forward." ] }),
+      createExercise({ name: "Gorilla Row", query: "dumbbell gorilla row", target: "Lats", sets: 4, reps: "8 / side", rest: 60, load: 12, plates: [2.5, 2.5], cues: ["Start with both dumbbells between the feet.", "Brace hard before each row.", "Alternate sides while keeping the hips level." ] }),
+      createExercise({ name: "Dumbbell Shrug", query: "dumbbell shrug", target: "Traps", sets: 3, reps: "15", rest: 45, load: 12, plates: [2.5, 2.5], cues: ["Lift the shoulders straight toward the ears.", "Pause at the top without rolling.", "Lower into a full stretch." ] }),
+      createExercise({ name: "Reverse Curl", query: "dumbbell reverse curl", target: "Forearms / biceps", sets: 3, reps: "12", rest: 45, load: 4.5, plates: [1.25], cues: ["Keep palms facing the floor.", "Pin elbows to the sides.", "Use a smooth, controlled lowering phase." ] }),
+      createExercise({ name: "Alternating Biceps Curl", query: "dumbbell alternate biceps curl", target: "Biceps", sets: 3, reps: "10 / side", rest: 45, load: 7, plates: [1.25, 1.25], cues: ["Turn the palm up as the weight rises.", "Keep the shoulder quiet.", "Finish one side before the other begins." ] }),
+    ],
+  },
+  {
+    id: "legs-alpha",
+    name: "Legs Workout - Alpha",
+    family: "Legs",
+    focus: "Squat + hinge",
+    duration: 46,
+    level: "Foundation",
+    accent: "#f6c84b",
+    description: "The home-gym lower-body base: a strong squat, a clean hinge, single-leg work, glutes, and calves.",
+    exercises: [
+      createExercise({ name: "Goblet Squat", query: "dumbbell goblet squat", target: "Quads / glutes", equipment: "One dumbbell", sets: 4, reps: "10", rest: 75, load: 12, plates: [2.5, 2.5], cues: ["Hold the dumbbell tight to the chest.", "Sit between the hips with the knees tracking over toes.", "Drive the floor away to stand." ] }),
+      createExercise({ name: "Dumbbell Romanian Deadlift", query: "dumbbell romanian deadlift", target: "Hamstrings / glutes", sets: 4, reps: "10", rest: 75, load: 12, plates: [2.5, 2.5], cues: ["Push the hips back with soft knees.", "Keep the dumbbells close to the legs.", "Finish tall without leaning back." ] }),
+      createExercise({ name: "Reverse Lunge", query: "dumbbell reverse lunge", target: "Quads / glutes", sets: 3, reps: "10 / side", rest: 60, load: 7, plates: [1.25, 1.25], cues: ["Step back far enough to keep the front foot planted.", "Lower the back knee under the hip.", "Push through the whole front foot." ] }),
+      createExercise({ name: "Weighted Glute Bridge", query: "dumbbell glute bridge", target: "Glutes", equipment: "One dumbbell", sets: 3, reps: "15", rest: 45, load: 12, plates: [2.5, 2.5], cues: ["Place the dumbbell across the hips.", "Tuck the pelvis before lifting.", "Pause at the top without arching the back." ] }),
+      createExercise({ name: "Standing Calf Raise", query: "dumbbell standing calf raise", target: "Calves", sets: 4, reps: "15-20", rest: 45, load: 7, plates: [1.25, 1.25], cues: ["Rise through the big toe.", "Pause at the top.", "Lower the heels into a full stretch." ] }),
+    ],
+  },
+  {
+    id: "legs-bravo",
+    name: "Legs Workout - Bravo",
+    family: "Legs",
+    focus: "Single-leg control",
+    duration: 43,
+    level: "Controlled",
+    accent: "#ff6b4a",
+    description: "A unilateral lower-body session for balance, hip stability, and useful strength with lighter dumbbells.",
+    exercises: [
+      createExercise({ name: "Bulgarian Split Squat", query: "dumbbell bulgarian split squat", target: "Quads / glutes", sets: 4, reps: "8 / side", rest: 75, load: 7, plates: [1.25, 1.25], cues: ["Set the front foot far enough forward for balance.", "Drop the back knee straight down.", "Drive through the front foot without bouncing." ] }),
+      createExercise({ name: "Dumbbell Sumo Squat", query: "dumbbell sumo squat", target: "Glutes / adductors", equipment: "One dumbbell", sets: 4, reps: "12", rest: 60, load: 12, plates: [2.5, 2.5], cues: ["Take a wide stance with toes turned out.", "Keep the dumbbell under the chest.", "Push the knees in line with the toes." ] }),
+      createExercise({ name: "Single-Leg Romanian Deadlift", query: "dumbbell single leg deadlift", target: "Hamstrings / balance", equipment: "One dumbbell", sets: 3, reps: "10 / side", rest: 60, load: 9.5, plates: [2.5, 1.25], cues: ["Keep the hips square to the floor.", "Reach the free leg long behind you.", "Stand by squeezing the planted-side glute." ] }),
+      createExercise({ name: "Dumbbell Step-Up", query: "dumbbell step-up", target: "Quads / glutes", sets: 3, reps: "10 / side", rest: 60, load: 7, plates: [1.25, 1.25], cues: ["Use a stable step below knee height.", "Keep the whole lead foot on the surface.", "Avoid pushing off the trailing leg." ] }),
+      createExercise({ name: "Seated Calf Raise", query: "dumbbell seated calf raise", target: "Calves", equipment: "One dumbbell", sets: 4, reps: "18", rest: 45, load: 12, plates: [2.5, 2.5], cues: ["Rest the dumbbell securely above the knee.", "Lift the heel as high as possible.", "Lower slowly into a full stretch." ] }),
+    ],
+  },
+  {
     id: "push-calisthenics-alpha",
     name: "Push Calisthenics Circuit - Alpha",
-    family: "Circuit",
+    family: "Calisthenics",
     focus: "Bodyweight conditioning",
     duration: 24,
     level: "Fast circuit",
     accent: "#f6c84b",
     description: "A fast, equipment-free circuit with simple progressions and short transitions. Complete three clean rounds.",
     exercises: [
-      createExercise({ name: "Push-Up", query: "push up", target: "Chest / triceps", equipment: "Body weight", sets: 3, reps: "12-20", rest: 30, load: 0, plates: [], cues: ["Brace from shoulders to heels.", "Lower the chest between the hands.", "Finish each rep with straight arms." ] }),
-      createExercise({ name: "Pike Push-Up", query: "pike push up", target: "Shoulders", equipment: "Body weight", sets: 3, reps: "8-12", rest: 30, load: 0, plates: [], cues: ["Lift the hips high.", "Lower the head slightly ahead of the hands.", "Drive the floor away." ] }),
-      createExercise({ name: "Close-Grip Push-Up", query: "close grip push up", target: "Triceps", equipment: "Body weight", sets: 3, reps: "8-15", rest: 30, load: 0, plates: [], cues: ["Set hands just inside shoulder width.", "Keep elbows tracking back.", "Use knees down if full reps lose shape." ] }),
-      createExercise({ name: "Plank Shoulder Tap", query: "plank shoulder tap", target: "Core / shoulders", equipment: "Body weight", sets: 3, reps: "20 taps", rest: 30, load: 0, plates: [], cues: ["Widen the feet for stability.", "Keep the hips level.", "Tap slowly without shifting weight." ] }),
-      createExercise({ name: "Push-Up Hold", query: "isometric push up hold", target: "Chest", equipment: "Body weight", sets: 3, reps: "20 sec", rest: 45, load: 0, plates: [], cues: ["Hold halfway down.", "Keep the body in one straight line.", "Breathe behind the brace." ] }),
+      createExercise({ name: "Push-Up", query: "push-up", target: "Chest / triceps", equipment: "Body weight", sets: 3, reps: "12-20", rest: 30, load: 0, plates: [], cues: ["Brace from shoulders to heels.", "Lower the chest between the hands.", "Finish each rep with straight arms." ] }),
+      createExercise({ name: "Bench Dip", query: "bench dip", target: "Triceps", equipment: "Chair or bench", sets: 3, reps: "10-15", rest: 30, load: 0, plates: [], cues: ["Use a stable chair that cannot slide.", "Keep the shoulders down and chest open.", "Bend the elbows only as far as feels comfortable." ] }),
+      createExercise({ name: "Close-Grip Push-Up", query: "close-grip push-up", target: "Triceps", equipment: "Body weight", sets: 3, reps: "8-15", rest: 30, load: 0, plates: [], cues: ["Set hands just inside shoulder width.", "Keep elbows tracking back.", "Use knees down if full reps lose shape." ] }),
+      createExercise({ name: "Shoulder-Tap Push-Up", query: "shoulder tap push-up", target: "Core / shoulders", equipment: "Body weight", sets: 3, reps: "16 taps", rest: 30, load: 0, plates: [], cues: ["Widen the feet for stability.", "Keep the hips level.", "Tap slowly without shifting weight." ] }),
+      createExercise({ name: "Push-Up Hold", query: "push-up", target: "Chest", equipment: "Body weight", sets: 3, reps: "20 sec", rest: 45, load: 0, plates: [], cues: ["Hold halfway down.", "Keep the body in one straight line.", "Breathe behind the brace." ] }),
+    ],
+  },
+  {
+    id: "push-calisthenics-bravo",
+    name: "Push Calisthenics Circuit - Bravo",
+    family: "Calisthenics",
+    focus: "Push-up variety",
+    duration: 26,
+    level: "Progressive circuit",
+    accent: "#d8ff3e",
+    description: "Five push patterns that move from accessible volume to tougher triceps work without overhead variations.",
+    exercises: [
+      createExercise({ name: "Incline Push-Up", query: "incline push-up", target: "Chest", equipment: "Chair or bench", sets: 3, reps: "15-20", rest: 30, load: 0, plates: [], cues: ["Use a stable raised surface.", "Keep the body in one line.", "Bring the lower chest toward the edge." ] }),
+      createExercise({ name: "Decline Push-Up", query: "decline push-up", target: "Upper chest", equipment: "Chair or bench", sets: 3, reps: "8-12", rest: 45, load: 0, plates: [], cues: ["Place the feet securely on the surface.", "Brace the glutes and abdomen.", "Keep elbows about 45 degrees from the torso." ] }),
+      createExercise({ name: "Diamond Push-Up", query: "diamond push-up", target: "Triceps / chest", equipment: "Body weight", sets: 3, reps: "8-12", rest: 45, load: 0, plates: [], cues: ["Place hands close without forcing the wrists.", "Keep elbows tracking back.", "Use knees down to preserve full range." ] }),
+      createExercise({ name: "Wide Push-Up", query: "wide push-up", target: "Chest", equipment: "Body weight", sets: 3, reps: "12-15", rest: 30, load: 0, plates: [], cues: ["Set hands just wider than shoulders.", "Keep wrists under the line of force.", "Press the floor apart as you rise." ] }),
+      createExercise({ name: "Bench Dip Hold", query: "bench dip", target: "Triceps", equipment: "Chair or bench", sets: 3, reps: "10 + 10s", rest: 45, load: 0, plates: [], cues: ["Keep the chair fixed against a wall.", "Complete clean reps before the hold.", "Hold near a comfortable mid-range position." ] }),
+    ],
+  },
+  {
+    id: "pull-calisthenics-alpha",
+    name: "Pull Calisthenics Circuit - Alpha",
+    family: "Calisthenics",
+    focus: "Pull-up foundation",
+    duration: 31,
+    level: "Bar basics",
+    accent: "#45cce1",
+    description: "A pull-up bar circuit that builds full reps, shoulder-blade control, rowing strength, and grip.",
+    exercises: [
+      createExercise({ name: "Pull-Up", query: "pull-up", target: "Lats / upper back", equipment: "Pull-up bar", sets: 4, reps: "5-10", rest: 60, load: 0, plates: [], cues: ["Start from a quiet full hang.", "Pull the chest toward the bar.", "Lower to straight arms without dropping." ] }),
+      createExercise({ name: "Chin-Up", query: "chin-up", target: "Lats / biceps", equipment: "Pull-up bar", sets: 3, reps: "5-10", rest: 60, load: 0, plates: [], cues: ["Use an underhand shoulder-width grip.", "Keep the ribs down as you pull.", "Finish with the chin clearly over the bar." ] }),
+      createExercise({ name: "Inverted Row", query: "inverted row", target: "Upper back", equipment: "Low bar or sturdy table", sets: 3, reps: "10-15", rest: 45, load: 0, plates: [], cues: ["Confirm the support cannot move.", "Keep the body rigid from shoulders to heels.", "Pull the chest to the edge or bar." ] }),
+      createExercise({ name: "Scapular Pull-Up", query: "scapular pull-up", target: "Lower traps / lats", equipment: "Pull-up bar", sets: 3, reps: "10", rest: 45, load: 0, plates: [], cues: ["Keep the elbows straight.", "Pull the shoulders down away from the ears.", "Use a small controlled range." ] }),
+      createExercise({ name: "Dead Hang", query: "dead hang", target: "Grip / shoulders", equipment: "Pull-up bar", sets: 3, reps: "30 sec", rest: 45, load: 0, plates: [], cues: ["Wrap the thumbs securely around the bar.", "Keep a small amount of shoulder tension.", "Step down if the grip begins to slip." ] }),
+    ],
+  },
+  {
+    id: "pull-calisthenics-bravo",
+    name: "Pull Calisthenics Circuit - Bravo",
+    family: "Calisthenics",
+    focus: "Pulling control",
+    duration: 33,
+    level: "Progressive circuit",
+    accent: "#a58cff",
+    description: "Slower eccentrics, close grips, and holds for stronger pull-ups without needing external weight.",
+    exercises: [
+      createExercise({ name: "Negative Pull-Up", query: "negative pull-up", target: "Lats / upper back", equipment: "Pull-up bar", sets: 4, reps: "5 @ 5 sec", rest: 60, load: 0, plates: [], cues: ["Use a step to begin over the bar.", "Lower for a full five seconds.", "Step down rather than jumping into the next rep." ] }),
+      createExercise({ name: "Close-Grip Chin-Up", query: "close-grip chin-up", target: "Biceps / lats", equipment: "Pull-up bar", sets: 3, reps: "6-10", rest: 60, load: 0, plates: [], cues: ["Set the hands just inside shoulder width.", "Pull the elbows toward the ribs.", "Avoid swinging the legs." ] }),
+      createExercise({ name: "Towel Row", query: "bodyweight row", target: "Upper back", equipment: "Towel and secure post", sets: 3, reps: "12-15", rest: 45, load: 0, plates: [], cues: ["Use only a fixed support you trust.", "Lean back with a braced body.", "Pull the chest toward the hands." ] }),
+      createExercise({ name: "Archer Pull-Up", query: "archer pull-up", target: "Lats", equipment: "Pull-up bar", sets: 3, reps: "4 / side", rest: 60, load: 0, plates: [], cues: ["Use a wide overhand grip.", "Pull toward one hand while the other arm lengthens.", "Use assisted partial reps when needed." ] }),
+      createExercise({ name: "Flexed-Arm Hang", query: "flexed arm hang", target: "Biceps / grip", equipment: "Pull-up bar", sets: 3, reps: "20 sec", rest: 45, load: 0, plates: [], cues: ["Start with the chin over the bar.", "Keep the shoulder blades pulled down.", "Step down before the grip fails." ] }),
+    ],
+  },
+  {
+    id: "legs-calisthenics-alpha",
+    name: "Legs Calisthenics Circuit - Alpha",
+    family: "Calisthenics",
+    focus: "Lower-body base",
+    duration: 27,
+    level: "No equipment",
+    accent: "#f6c84b",
+    description: "A simple leg circuit for quads, glutes, calves, and work capacity with no equipment required.",
+    exercises: [
+      createExercise({ name: "Bodyweight Squat", query: "bodyweight squat", target: "Quads / glutes", equipment: "Body weight", sets: 3, reps: "20", rest: 30, load: 0, plates: [], cues: ["Set the feet at a comfortable width.", "Sit between the hips while keeping the heels down.", "Stand tall and squeeze the glutes." ] }),
+      createExercise({ name: "Reverse Lunge", query: "reverse lunge", target: "Quads / glutes", equipment: "Body weight", sets: 3, reps: "12 / side", rest: 30, load: 0, plates: [], cues: ["Take a controlled step back.", "Lower the back knee under the hip.", "Drive through the front foot." ] }),
+      createExercise({ name: "Glute Bridge", query: "glute bridge", target: "Glutes", equipment: "Body weight", sets: 3, reps: "20", rest: 30, load: 0, plates: [], cues: ["Place the feet close enough to reach with the fingertips.", "Tuck the pelvis before lifting.", "Pause at full hip extension." ] }),
+      createExercise({ name: "Single-Leg Calf Raise", query: "single leg calf raise", target: "Calves", equipment: "Body weight", sets: 3, reps: "15 / side", rest: 30, load: 0, plates: [], cues: ["Use a wall lightly for balance.", "Rise through the big toe.", "Lower the heel slowly." ] }),
+      createExercise({ name: "Wall Sit", query: "wall sit", target: "Quads", equipment: "Wall", sets: 3, reps: "40 sec", rest: 45, load: 0, plates: [], cues: ["Press the back flat into the wall.", "Keep knees stacked over ankles.", "Breathe steadily through the hold." ] }),
+    ],
+  },
+  {
+    id: "legs-calisthenics-bravo",
+    name: "Legs Calisthenics Circuit - Bravo",
+    family: "Calisthenics",
+    focus: "Unilateral legs",
+    duration: 29,
+    level: "Controlled circuit",
+    accent: "#ff6b4a",
+    description: "Single-leg patterns and longer ranges for balance, hip control, and a tougher bodyweight leg day.",
+    exercises: [
+      createExercise({ name: "Split Squat", query: "split squat", target: "Quads / glutes", equipment: "Body weight", sets: 3, reps: "12 / side", rest: 45, load: 0, plates: [], cues: ["Use a stance long enough for both heels to stay stable.", "Drop the back knee straight down.", "Keep pressure through the whole front foot." ] }),
+      createExercise({ name: "Lateral Lunge", query: "side lunge", target: "Adductors / glutes", equipment: "Body weight", sets: 3, reps: "10 / side", rest: 45, load: 0, plates: [], cues: ["Step wide and sit into one hip.", "Keep the other leg long.", "Push the floor away to return." ] }),
+      createExercise({ name: "Single-Leg Glute Bridge", query: "single leg glute bridge", target: "Glutes / hamstrings", equipment: "Body weight", sets: 3, reps: "12 / side", rest: 30, load: 0, plates: [], cues: ["Keep the pelvis level.", "Drive through the planted heel.", "Pause at the top without arching." ] }),
+      createExercise({ name: "Squat Pulse", query: "bodyweight squat", target: "Quads", equipment: "Body weight", sets: 3, reps: "20", rest: 30, load: 0, plates: [], cues: ["Stay in the lower half of the squat.", "Keep the heels grounded.", "Use small smooth pulses." ] }),
+      createExercise({ name: "Step-Up", query: "step-up", target: "Quads / glutes", equipment: "Stable step", sets: 3, reps: "12 / side", rest: 45, load: 0, plates: [], cues: ["Choose a solid surface below knee height.", "Plant the whole lead foot.", "Control the step back down." ] }),
+    ],
+  },
+  {
+    id: "core-calisthenics-alpha",
+    name: "Core Calisthenics Circuit - Alpha",
+    family: "Calisthenics",
+    focus: "Bracing + trunk control",
+    duration: 22,
+    level: "No equipment",
+    accent: "#d8ff3e",
+    description: "A focused core circuit that trains resisting extension, rotation, and side-bending before a fast finish.",
+    exercises: [
+      createExercise({ name: "Dead Bug", query: "dead bug", target: "Deep core", equipment: "Body weight", sets: 3, reps: "10 / side", rest: 30, load: 0, plates: [], cues: ["Press the lower back gently into the floor.", "Reach the opposite arm and leg long.", "Stop the range before the back arches." ] }),
+      createExercise({ name: "Forearm Plank", query: "front plank", target: "Core", equipment: "Body weight", sets: 3, reps: "40 sec", rest: 30, load: 0, plates: [], cues: ["Push the forearms into the floor.", "Squeeze glutes and quads.", "Keep the hips level with the shoulders." ] }),
+      createExercise({ name: "Side Plank", query: "side plank", target: "Obliques", equipment: "Body weight", sets: 3, reps: "30 sec / side", rest: 30, load: 0, plates: [], cues: ["Stack the shoulder over the elbow.", "Lift the underside waist away from the floor.", "Keep the hips stacked." ] }),
+      createExercise({ name: "Hollow Body Hold", query: "hollow hold", target: "Anterior core", equipment: "Body weight", sets: 3, reps: "25 sec", rest: 30, load: 0, plates: [], cues: ["Press the lower back into the floor.", "Reach arms and legs away from the center.", "Bend the knees if the back starts to lift." ] }),
+      createExercise({ name: "Mountain Climber", query: "mountain climber", target: "Core / conditioning", equipment: "Body weight", sets: 3, reps: "30 sec", rest: 45, load: 0, plates: [], cues: ["Keep shoulders over the hands.", "Drive one knee forward at a time.", "Keep the hips steady as speed increases." ] }),
     ],
   },
 ];
@@ -160,7 +330,15 @@ const app = document.querySelector("#app");
 const headerStatus = document.querySelector("#headerStatus");
 const toastRegion = document.querySelector("#toastRegion");
 const homeLink = document.querySelector("[data-home-link]");
+const musicDock = document.querySelector("#musicDock");
+const musicFrame = document.querySelector("#musicFrame");
+const musicForm = document.querySelector("#musicForm");
+const musicUrlInput = document.querySelector("#musicUrl");
+const musicMessage = document.querySelector("#musicMessage");
+const musicProvider = document.querySelector("#musicProvider");
 const exerciseCache = new Map();
+const EXERCISE_CACHE_KEY = "erolsExerciseCacheV2";
+const EXERCISE_CACHE_TTL = 14 * 24 * 60 * 60 * 1000;
 let activeFilter = "All";
 let session = null;
 let restTimerId = null;
@@ -196,6 +374,71 @@ const showToast = (message) => {
   toastRegion.append(toast);
   window.setTimeout(() => toast.remove(), 3500);
 };
+
+const toMusicEmbed = (value) => {
+  const url = new URL(value.trim());
+  const hostname = url.hostname.toLowerCase().replace(/^www\./, "");
+
+  if (hostname === "open.spotify.com") {
+    const parts = url.pathname.split("/").filter(Boolean);
+    const allowedTypes = ["playlist", "album", "track", "episode", "show", "artist"];
+    const typeIndex = parts.findIndex((part) => allowedTypes.includes(part));
+    const type = parts[typeIndex];
+    const id = parts[typeIndex + 1];
+    if (!type || !id || !/^[a-zA-Z0-9]+$/.test(id)) throw new Error("Use a Spotify playlist, album, track, show, episode, or artist link.");
+    return { provider: "SPOTIFY", url: `https://open.spotify.com/embed/${type}/${id}?utm_source=generator&theme=0` };
+  }
+
+  if (["music.youtube.com", "youtube.com", "youtu.be"].includes(hostname)) {
+    const videoId = hostname === "youtu.be" ? url.pathname.split("/").filter(Boolean)[0] : url.searchParams.get("v");
+    const playlistId = url.searchParams.get("list");
+    if (videoId && /^[a-zA-Z0-9_-]+$/.test(videoId)) {
+      const playlistQuery = playlistId && /^[a-zA-Z0-9_-]+$/.test(playlistId) ? `?list=${playlistId}` : "";
+      return { provider: "YOUTUBE MUSIC", url: `https://www.youtube.com/embed/${videoId}${playlistQuery}` };
+    }
+    if (playlistId && /^[a-zA-Z0-9_-]+$/.test(playlistId)) {
+      return { provider: "YOUTUBE MUSIC", url: `https://www.youtube.com/embed/videoseries?list=${playlistId}` };
+    }
+    throw new Error("Use a YouTube Music track or playlist link.");
+  }
+
+  if (hostname === "soundcloud.com") {
+    const cleanUrl = `${url.origin}${url.pathname}`;
+    return { provider: "SOUNDCLOUD", url: `https://w.soundcloud.com/player/?url=${encodeURIComponent(cleanUrl)}&color=%2311120f&auto_play=false&show_artwork=true` };
+  }
+
+  throw new Error("Use a link from Spotify, YouTube Music, or SoundCloud.");
+};
+
+const setMusicSource = (source, persist = true) => {
+  musicFrame.src = source.url;
+  musicFrame.title = `${source.provider} training player`;
+  musicProvider.textContent = source.provider;
+  musicMessage.textContent = `${source.provider} loaded. Press play in the player.`;
+  musicMessage.classList.remove("is-error");
+  if (persist) {
+    try {
+      localStorage.setItem("erolsGymMusic", JSON.stringify(source));
+    } catch {
+      // The player still works for the current visit.
+    }
+  }
+};
+
+const setMusicDockOpen = (isOpen) => {
+  const toggle = musicDock.querySelector("[data-music-toggle]");
+  musicDock.classList.toggle("is-collapsed", !isOpen);
+  toggle.setAttribute("aria-expanded", String(isOpen));
+  toggle.setAttribute("aria-label", isOpen ? "Close music player" : "Open music player");
+  toggle.textContent = isOpen ? "−" : "+";
+};
+
+try {
+  const savedMusic = JSON.parse(localStorage.getItem("erolsGymMusic") || "null");
+  if (savedMusic?.url && savedMusic?.provider) setMusicSource(savedMusic, false);
+} catch {
+  // The default Spotify playlist remains available.
+}
 
 const navigate = (url, replace = false) => {
   if (replace) history.replaceState({}, "", url);
@@ -276,7 +519,7 @@ const renderHome = () => {
       <section aria-label="Workout plans">
         <div class="index-toolbar">
           <div class="filter-group" role="group" aria-label="Filter workout plans">
-            ${["All", "Push", "Pull", "Circuit"].map((filter) => `<button class="filter-button ${filter === activeFilter ? "is-active" : ""}" type="button" data-filter="${filter}" aria-pressed="${filter === activeFilter}">${filter}</button>`).join("")}
+            ${["All", "Push", "Pull", "Legs", "Calisthenics"].map((filter) => `<button class="filter-button ${filter === activeFilter ? "is-active" : ""}" type="button" data-filter="${filter}" aria-pressed="${filter === activeFilter}">${filter}</button>`).join("")}
           </div>
           <p class="workout-count" id="workoutCount">${workouts.length} plans</p>
         </div>
@@ -341,7 +584,7 @@ const renderDetail = (workout) => {
             <div class="detail-stat"><strong>${workout.duration}</strong><span>Minutes</span></div>
             <div class="detail-stat"><strong>${workout.exercises.length}</strong><span>Exercises</span></div>
             <div class="detail-stat"><strong>${totalSets(workout)}</strong><span>Total sets</span></div>
-            <div class="detail-stat"><strong>${workout.family === "Circuit" ? "0" : "2"}</strong><span>Dumbbells</span></div>
+            <div class="detail-stat"><strong>${workout.exercises.some((exercise) => exercise.load) ? "2" : "0"}</strong><span>Dumbbells</span></div>
           </div>
           <button class="primary-button" type="button" data-start-workout="${workout.id}">Start workout <span aria-hidden="true">→</span></button>
         </aside>
@@ -470,7 +713,7 @@ const renderEquipment = (exercise, accent) => {
 const normalizeApiExercise = (payload) => {
   const candidates = Array.isArray(payload)
     ? payload
-    : payload?.data?.exercises || payload?.data || payload?.exercises || payload?.results || [];
+    : payload?.data?.exercises || payload?.data || payload?.exercises || payload?.results || (payload && typeof payload === "object" ? payload : []);
   const item = Array.isArray(candidates) ? candidates[0] : candidates;
   if (!item || typeof item !== "object") return null;
 
@@ -483,21 +726,82 @@ const normalizeApiExercise = (payload) => {
   };
 };
 
+const normalizeSearchText = (value) => String(value || "")
+  .toLowerCase()
+  .replace(/[^a-z0-9]+/g, " ")
+  .trim();
+
+const scoreExerciseMatch = (candidate, query) => {
+  const candidateName = normalizeSearchText(candidate?.name);
+  const queryName = normalizeSearchText(query);
+  if (!candidateName) return -1;
+  if (candidateName === queryName) return 1000;
+  if (candidateName.includes(queryName) || queryName.includes(candidateName)) return 500 - Math.abs(candidateName.length - queryName.length);
+  const queryTokens = new Set(queryName.split(" "));
+  const candidateTokens = new Set(candidateName.split(" "));
+  const overlap = [...queryTokens].filter((token) => candidateTokens.has(token)).length;
+  return (overlap / Math.max(queryTokens.size, candidateTokens.size, 1)) * 100;
+};
+
+const getCachedExercise = (query) => {
+  try {
+    const cache = JSON.parse(localStorage.getItem(EXERCISE_CACHE_KEY) || "{}");
+    const entry = cache[query];
+    if (entry && Date.now() - entry.cachedAt < EXERCISE_CACHE_TTL) return entry.value;
+  } catch {
+    return null;
+  }
+  return null;
+};
+
+const storeCachedExercise = (query, value) => {
+  try {
+    const cache = JSON.parse(localStorage.getItem(EXERCISE_CACHE_KEY) || "{}");
+    cache[query] = { cachedAt: Date.now(), value };
+    localStorage.setItem(EXERCISE_CACHE_KEY, JSON.stringify(cache));
+  } catch {
+    // Memory caching still prevents repeat requests during this session.
+  }
+};
+
 const fetchExercise = async (query) => {
   if (exerciseCache.has(query)) return exerciseCache.get(query);
+  const locallyCached = getCachedExercise(query);
+  if (locallyCached) {
+    exerciseCache.set(query, locallyCached);
+    return locallyCached;
+  }
   const controller = new AbortController();
-  const timeout = window.setTimeout(() => controller.abort(), 6500);
+  const timeout = window.setTimeout(() => controller.abort(), 9000);
   try {
-    const response = await fetch(`https://exercisedb-api.vercel.app/api/v1/exercises/search?q=${encodeURIComponent(query)}&limit=5`, {
+    const response = await fetch(`https://oss.exercisedb.dev/api/v1/exercises/search?search=${encodeURIComponent(query)}`, {
       signal: controller.signal,
       headers: { Accept: "application/json" },
     });
     if (!response.ok) throw new Error(`ExerciseDB returned ${response.status}`);
-    const normalized = normalizeApiExercise(await response.json());
+    const searchPayload = await response.json();
+    const candidates = Array.isArray(searchPayload?.data) ? searchPayload.data : [];
+    const bestMatch = candidates.sort((a, b) => scoreExerciseMatch(b, query) - scoreExerciseMatch(a, query))[0];
+    if (!bestMatch) throw new Error("ExerciseDB returned no matching exercise");
+
+    let detail = bestMatch;
+    if (bestMatch.exerciseId) {
+      const detailResponse = await fetch(`https://oss.exercisedb.dev/api/v1/exercises/${encodeURIComponent(bestMatch.exerciseId)}`, {
+        signal: controller.signal,
+        headers: { Accept: "application/json" },
+      });
+      if (detailResponse.ok) {
+        const detailPayload = await detailResponse.json();
+        detail = detailPayload?.data || bestMatch;
+      }
+    }
+
+    const normalized = normalizeApiExercise(detail);
+    if (!normalized) throw new Error("ExerciseDB response could not be read");
     exerciseCache.set(query, normalized);
+    storeCachedExercise(query, normalized);
     return normalized;
   } catch {
-    exerciseCache.set(query, null);
     return null;
   } finally {
     window.clearTimeout(timeout);
@@ -523,6 +827,7 @@ const loadExerciseGuide = async (exercise) => {
   }
 
   if (apiExercise?.media) {
+    media.classList.remove("is-fallback");
     media.innerHTML = `<img class="exercise-gif" src="${escapeHtml(apiExercise.media)}" alt="Animated demonstration of ${escapeHtml(exercise.name)}" />`;
     const image = media.querySelector("img");
     image.addEventListener("error", () => renderMediaFallback(media, exercise), { once: true });
@@ -532,6 +837,7 @@ const loadExerciseGuide = async (exercise) => {
 };
 
 const renderMediaFallback = (media, exercise) => {
+  media.classList.add("is-fallback");
   media.innerHTML = `<div class="media-fallback">
     <div class="fallback-figure"><span class="motion-mark" aria-hidden="true"></span><div><strong>${escapeHtml(exercise.name)}</strong><span>Live ExerciseDB media is unavailable. Use the coaching steps below.</span></div></div>
   </div>`;
@@ -714,6 +1020,10 @@ app.addEventListener("click", (event) => {
 });
 
 document.addEventListener("click", (event) => {
+  if (event.target.closest("[data-music-toggle]")) {
+    setMusicDockOpen(musicDock.classList.contains("is-collapsed"));
+    return;
+  }
   const skip = event.target.closest("[data-skip-rest]");
   if (skip) {
     const overlay = skip.closest(".rest-screen");
@@ -727,6 +1037,18 @@ document.addEventListener("click", (event) => {
   }
 });
 
+musicForm.addEventListener("submit", (event) => {
+  event.preventDefault();
+  try {
+    const source = toMusicEmbed(musicUrlInput.value);
+    setMusicSource(source);
+    musicUrlInput.value = "";
+  } catch (error) {
+    musicMessage.textContent = error.message;
+    musicMessage.classList.add("is-error");
+  }
+});
+
 homeLink.addEventListener("click", (event) => {
   event.preventDefault();
   navigate(window.location.pathname);
@@ -734,6 +1056,10 @@ homeLink.addEventListener("click", (event) => {
 
 window.addEventListener("popstate", route);
 window.addEventListener("keydown", (event) => {
+  if (event.key === "Escape" && !musicDock.classList.contains("is-collapsed")) {
+    setMusicDockOpen(false);
+    return;
+  }
   if (event.key === "Escape" && session && !document.querySelector(".complete-screen")) exitSession();
 });
 

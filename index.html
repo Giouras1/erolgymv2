@@ -28,6 +28,35 @@
 
     <main id="app" tabindex="-1"></main>
 
+    <aside class="music-dock is-collapsed" id="musicDock" aria-label="Background music player">
+      <header class="music-dock-header">
+        <div class="music-dock-title">
+          <span class="equalizer" aria-hidden="true"><i></i><i></i><i></i></span>
+          <span><strong>TRAINING AUDIO</strong><small id="musicProvider">SPOTIFY</small></span>
+        </div>
+        <button class="music-toggle" type="button" data-music-toggle aria-expanded="false" aria-controls="musicDockBody" aria-label="Open music player">+</button>
+      </header>
+      <div class="music-dock-body" id="musicDockBody">
+        <iframe
+          id="musicFrame"
+          title="Spotify training playlist"
+          src="https://open.spotify.com/embed/playlist/37i9dQZF1DX76Wlfdnj7AP?utm_source=generator&theme=0"
+          width="100%"
+          height="352"
+          allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+          loading="lazy"
+        ></iframe>
+        <form class="music-form" id="musicForm">
+          <label for="musicUrl">Load your mix</label>
+          <div class="music-input-row">
+            <input id="musicUrl" name="musicUrl" type="url" inputmode="url" placeholder="Spotify, YouTube Music, or SoundCloud link" autocomplete="off" required />
+            <button type="submit">Load</button>
+          </div>
+          <p class="music-message" id="musicMessage">Paste a playlist, album, or track link.</p>
+        </form>
+      </div>
+    </aside>
+
     <div id="toastRegion" class="toast-region" aria-live="polite" aria-atomic="true"></div>
 
     <noscript>
